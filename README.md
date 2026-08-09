@@ -4,6 +4,8 @@ A niri rice: niri + waybar + swaync + rofi.
 
 Solarized dark theme (`#002B36`) with accent `#ffb52a`, "gotham-forest" wallpaper.
 
+![Preview](preview.png)
+
 ## Components
 
 | Part | Repo path | Description |
