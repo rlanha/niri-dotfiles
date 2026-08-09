@@ -1,13 +1,10 @@
 * {
-    font-family: "JetBrains Mono", "Fira Code", monospace;
-    font-size: 18px;
-    color: #839496;
+    background-image: none;
+    box-shadow: none;
 }
 
 window {
     background-color: rgba(0, 43, 54, 0.6);
-    border-radius: 0px;
-    margin: 0px;
 }
 
 button {
@@ -16,33 +13,42 @@ button {
     border: 2px solid #073642;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 40%;
+    background-size: 25%;
     border-radius: 12px;
     margin: 8px;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 18px;
+    text-decoration-color: #839496;
+    outline-style: none;
 }
 
-button:hover {
+button:hover, button:focus {
     background-color: #073642;
     color: #ffb52a;
-    border: 2px solid #ffb52a;
+    border-color: #ffb52a;
 }
 
 #shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"));
     color: #dc322f;
 }
 
 #reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"));
     color: #268bd2;
 }
 
 #logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"));
     color: #b58900;
 }
 
 #lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"));
     color: #2aa198;
 }
 
 #suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"));
     color: #6c71c4;
 }
