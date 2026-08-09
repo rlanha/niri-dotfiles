@@ -1,28 +1,28 @@
 # niri-dotfiles
 
-Ricing niri + waybar + swaync + rofi on CachyOS (Lenovo G50-45 / AMD A8-6410).
+A niri rice: niri + waybar + swaync + rofi.
 
-Theme: solarized dark (`#002B36`), accent `#ffb52a`, wallpaper "gotham-forest".
+Solarized dark theme (`#002B36`) with accent `#ffb52a`, "gotham-forest" wallpaper.
 
-## Komponen
+## Components
 
-| Bagian | Path di repo | Keterangan |
+| Part | Repo path | Description |
 |---|---|---|
-| niri | `niri/config.kdl` | WM, autostart, keybindings, focus-follows-mouse, overview backdrop |
-| waybar | `waybar/` | Bar: workspace, window title, notifikasi, mpris, volume, brightness, network, jam |
+| niri | `niri/config.kdl` | WM: autostart, keybindings, focus-follows-mouse, overview backdrop |
+| waybar | `waybar/` | Bar: workspaces, focused window, notifications, mpris, volume, brightness, network, clock |
 | swaync | `swaync/` | Notification daemon + notification center |
-| rofi | `rofi/` | App launcher dengan icon Tela, import tema solarized_alternate |
+| rofi | `rofi/` | App launcher with Tela icons, based on solarized_alternate |
 | wallpaper | `wallpapers/` | gotham-forest (3840x2160) |
 
-## Dependensi
+## Dependencies
 
 - `niri` `waybar` `swaync` `rofi` `swaybg` `swaylock` `swayidle` `cliphist`
 - `wl-clipboard` `brightnessctl` `playerctl` `wpctl` (pipewire)
-- Icon theme: `tela-nord-dark` (Tela icons via KDE store)
+- Icon theme: `tela-nord-dark` (Tela icons)
 
 ## Setup
 
-1. Salin isi folder ke `~/.config/`:
+1. Copy the folders into `~/.config/`:
    ```bash
    cp -r niri ~/.config/
    cp -r waybar ~/.config/
@@ -34,26 +34,26 @@ Theme: solarized dark (`#002B36`), accent `#ffb52a`, wallpaper "gotham-forest".
    mkdir -p ~/.local/share/wallpapers
    cp wallpapers/gotham-forest.png ~/.local/share/wallpapers/
    ```
-3. Sesuaikan path user di `~/.config/niri/config.kdl` (`/home/soft` → user kamu).
-4. Pilih sesi **niri** di sddm.
+3. Adjust the user path in `~/.config/niri/config.kdl` (replace `/home/soft` with your user).
+4. Select the **niri** session in your display manager.
 
-## Keybindings penting
+## Keybindings
 
-| Shortcut | Aksi |
+| Shortcut | Action |
 |---|---|
 | `Mod+T` | Terminal (alacritty) |
-| `Mod+D` | Launcher (rofi) |
+| `Mod+D` | App launcher (rofi) |
 | `Mod+Ctrl+V` | Clipboard history (cliphist + rofi) |
 | `Mod+O` | Overview |
-| `Mod+Q` | Tutup window |
-| `Mod+J/K/L/H` | Navigasi window |
+| `Mod+Q` | Close window |
+| `Mod+J/K/L/H` | Window navigation |
 | `Super+Alt+L` | Lock screen (swaylock) |
 | `Mod+Shift+V` | Toggle floating |
 
 `Mod` = Super (Windows key).
 
-## Catatan
+## Notes
 
-- AMD Beema (Radeon R5): tambahkan `amdgpu.dc=0` di kernel cmdline kalau black screen.
-- Scroll wheel di waybar: volume & brightness naik/turun.
-- `focus-follows-mouse` aktif - arahkan kursor untuk pindah fokus.
+- Add `amdgpu.dc=0` to the kernel command line if you get a black screen with amdgpu.
+- Scroll over volume/brightness modules in waybar to adjust.
+- `focus-follows-mouse` is enabled: move your cursor to change focus.
