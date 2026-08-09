@@ -11,6 +11,7 @@ Solarized dark theme (`#002B36`) with accent `#ffb52a`, "gotham-forest" wallpape
 | Part | Repo path | Description |
 |---|---|---|
 | niri | `niri/config.kdl` | WM: autostart, keybindings, focus-follows-mouse, overview backdrop |
+| hypr | `hypr/hyprlock.conf` | Lock screen: blurred wallpaper, clock + password field |
 | waybar | `waybar/` | Bar: workspaces, focused window, notifications, mpris, volume, brightness, network, clock |
 | swaync | `swaync/` | Notification daemon + notification center |
 | rofi | `rofi/` | App launcher with Tela icons, based on solarized_alternate |
@@ -19,7 +20,7 @@ Solarized dark theme (`#002B36`) with accent `#ffb52a`, "gotham-forest" wallpape
 
 ## Dependencies
 
-- `niri` `waybar` `swaync` `rofi` `wlogout` `swaybg` `swaylock` `swayidle` `cliphist`
+- `niri` `waybar` `swaync` `rofi` `wlogout` `hyprlock` `swaybg` `swayidle` `cliphist`
 - `wl-clipboard` `brightnessctl` `playerctl` `wpctl` (pipewire)
 - Icon theme: `tela-nord-dark` (Tela icons)
 
@@ -32,6 +33,7 @@ Solarized dark theme (`#002B36`) with accent `#ffb52a`, "gotham-forest" wallpape
    cp -r swaync ~/.config/
    cp -r rofi ~/.config/
    cp -r wlogout ~/.config/
+   cp -r hypr ~/.config/
    ```
 2. Wallpaper:
    ```bash
@@ -51,7 +53,7 @@ Solarized dark theme (`#002B36`) with accent `#ffb52a`, "gotham-forest" wallpape
 | `Mod+O` | Overview |
 | `Mod+Q` | Close window |
 | `Mod+J/K/L/H` | Window navigation |
-| `Super+Alt+L` | Lock screen (swaylock) |
+| `Super+Alt+L` | Lock screen (hyprlock) |
 | `Mod+Shift+X` | Logout/power menu (wlogout) |
 | `Mod+Shift+V` | Toggle floating |
 
