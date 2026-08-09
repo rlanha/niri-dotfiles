@@ -1,0 +1,105 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 4,
+    "modules-left": [
+        "custom/workspaces",
+        "custom/divider",
+        "custom/window",
+        "custom/divider",
+        "custom/notification",
+        "custom/divider",
+        "mpris"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "tray",
+        "custom/divider",
+        "backlight",
+        "network",
+        "pulseaudio",
+        "custom/divider",
+        "clock"
+    ],
+
+    "custom/workspaces": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/niri-workspaces.sh",
+        "interval": 2,
+        "on-scroll-up": "niri msg action focus-workspace-up",
+        "on-scroll-down": "niri msg action focus-workspace-down",
+        "on-click": "niri msg action toggle-overview"
+    },
+
+    "custom/divider": {
+        "format": "│",
+        "interval": "once"
+    },
+
+    "custom/window": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/niri-window.sh",
+        "interval": 1,
+        "max-length": 60,
+        "tooltip": false
+    },
+
+    "custom/notification": {
+        "format": "{}",
+        "exec": "swaync-client -swb",
+        "exec-if": "pgrep swaync",
+        "interval": 3,
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw"
+    },
+
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "player-icons": {
+            "default": "▶",
+            "spotify": "▶",
+            "firefox": "▶"
+        },
+        "max-length": 30,
+        "interval": 5
+    },
+
+    "network": {
+        "format-wifi": "{signalStrength}%",
+        "format-ethernet": "net",
+        "format-disconnected": "offline",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "interval": 10
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "MUTED",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- -l 1.0"
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", ""],
+        "on-click": "brightnessctl --class=backlight set +10%",
+        "on-scroll-up": "brightnessctl --class=backlight set +5%",
+        "on-scroll-down": "brightnessctl --class=backlight set 5%-"
+    },
+
+    "clock": {
+        "format": "{:%a %d %I:%M %p}",
+        "interval": 10,
+        "tooltip-format": "{:%A, %d %B %Y}"
+    },
+
+    "tray": {
+        "spacing": 8
+    }
+}

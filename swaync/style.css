@@ -1,0 +1,103 @@
+@define-color bg #002B36;
+@define-color bg-alt #073642;
+@define-color fg #BCC3C3;
+@define-color fg-muted #93A1A1;
+@define-color accent #ffb52a;
+@define-color danger #e60053;
+@define-color urgent #FF0000;
+@define-color border #094557;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Hack", sans-serif;
+    font-size: 12px;
+}
+
+.control-center {
+    background-color: @bg;
+    border: 1px solid @border;
+    border-radius: 8px;
+    color: @fg;
+}
+
+.control-center .title {
+    color: @accent;
+    font-weight: bold;
+}
+
+.control-center .widget-title > button {
+    color: @fg;
+    background: @bg-alt;
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+
+.control-center .widget-dnd {
+    color: @fg;
+}
+
+.control-center .widget-dnd > switch {
+    background: @bg-alt;
+    border-radius: 8px;
+}
+
+.control-center .widget-dnd > switch:checked {
+    background: @accent;
+}
+
+.control-center .notification {
+    background-color: @bg-alt;
+    border: 1px solid @border;
+    border-radius: 8px;
+}
+
+.control-center .notification:hover {
+    background-color: #0a4a5a;
+}
+
+.notification {
+    background-color: @bg-alt;
+    border: 1px solid @border;
+    border-radius: 8px;
+    color: @fg;
+}
+
+.notification.default .notification-default-action:hover {
+    background-color: #0a4a5a;
+}
+
+.notification.low .notification-default-action {
+    color: @fg-muted;
+}
+
+.notification.critical {
+    border-color: @urgent;
+}
+
+.notification .notification-header .summary {
+    color: @fg;
+    font-weight: bold;
+}
+
+.notification .notification-header .time {
+    color: @fg-muted;
+}
+
+.notification .notification-action button {
+    background: @bg;
+    color: @fg;
+    border-radius: 4px;
+}
+
+.notification .notification-action button:hover {
+    background: @bg-alt;
+}
+
+.empty-placeholder {
+    color: @fg-muted;
+}
+
+.widget-mpris {
+    color: @fg;
+    background-color: @bg-alt;
+    border-radius: 8px;
+}

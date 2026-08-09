@@ -1,0 +1,11 @@
+@import "/usr/share/rofi/themes/solarized_alternate.rasi"
+
+configuration {
+    modes: "drun,run";
+    font: "JetBrainsMono Nerd Font 12";
+    location: 0;
+    show-icons: true;
+    icon-theme: "Tela-nord-dark";
+    drun-display-format: "{name}";
+    drun-match-fields: "name,generic,exec,categories,keywords";
+}
