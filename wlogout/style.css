@@ -1,0 +1,48 @@
+* {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 18px;
+    color: #839496;
+}
+
+window {
+    background-color: rgba(0, 43, 54, 0.6);
+    border-radius: 0px;
+    margin: 0px;
+}
+
+button {
+    background-color: #002B36;
+    color: #839496;
+    border: 2px solid #073642;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    border-radius: 12px;
+    margin: 8px;
+}
+
+button:hover {
+    background-color: #073642;
+    color: #ffb52a;
+    border: 2px solid #ffb52a;
+}
+
+#shutdown {
+    color: #dc322f;
+}
+
+#reboot {
+    color: #268bd2;
+}
+
+#logout {
+    color: #b58900;
+}
+
+#lock {
+    color: #2aa198;
+}
+
+#suspend {
+    color: #6c71c4;
+}

@@ -14,11 +14,12 @@ Solarized dark theme (`#002B36`) with accent `#ffb52a`, "gotham-forest" wallpape
 | waybar | `waybar/` | Bar: workspaces, focused window, notifications, mpris, volume, brightness, network, clock |
 | swaync | `swaync/` | Notification daemon + notification center |
 | rofi | `rofi/` | App launcher with Tela icons, based on solarized_alternate |
+| wlogout | `wlogout/` | Logout/power menu (shutdown, reboot, logout, lock, suspend) |
 | wallpaper | `wallpapers/` | gotham-forest (3840x2160) |
 
 ## Dependencies
 
-- `niri` `waybar` `swaync` `rofi` `swaybg` `swaylock` `swayidle` `cliphist`
+- `niri` `waybar` `swaync` `rofi` `wlogout` `swaybg` `swaylock` `swayidle` `cliphist`
 - `wl-clipboard` `brightnessctl` `playerctl` `wpctl` (pipewire)
 - Icon theme: `tela-nord-dark` (Tela icons)
 
@@ -30,6 +31,7 @@ Solarized dark theme (`#002B36`) with accent `#ffb52a`, "gotham-forest" wallpape
    cp -r waybar ~/.config/
    cp -r swaync ~/.config/
    cp -r rofi ~/.config/
+   cp -r wlogout ~/.config/
    ```
 2. Wallpaper:
    ```bash
@@ -50,6 +52,7 @@ Solarized dark theme (`#002B36`) with accent `#ffb52a`, "gotham-forest" wallpape
 | `Mod+Q` | Close window |
 | `Mod+J/K/L/H` | Window navigation |
 | `Super+Alt+L` | Lock screen (swaylock) |
+| `Mod+Shift+X` | Logout/power menu (wlogout) |
 | `Mod+Shift+V` | Toggle floating |
 
 `Mod` = Super (Windows key).
