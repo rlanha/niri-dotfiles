@@ -27,7 +27,6 @@
     "custom/workspaces": {
         "format": "{}",
         "exec": "$HOME/.config/waybar/niri-workspaces.sh",
-        "interval": 2,
         "on-scroll-up": "niri msg action focus-workspace-up",
         "on-scroll-down": "niri msg action focus-workspace-down",
         "on-click": "niri msg action toggle-overview"
